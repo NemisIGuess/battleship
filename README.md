@@ -17,6 +17,6 @@ For reference there are:
 - 2 ship of size 3: A Destroyer and a Submarine
 - 1 ship of size 2: The Patrol Boat
 
-# Goals
+### Goals
 
 This project is done with the goal of implementing Test Driven Development (TDD).
