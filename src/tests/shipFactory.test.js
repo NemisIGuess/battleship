@@ -1,8 +1,8 @@
-import shipFactory from '../components/shipFactory';
+import Ship from '../components/shipFactory';
 
 describe('Creates ships depending on what is asked', () => {
   test('returns a Carrier', () => {
-    expect(shipFactory('carrier', 5)).toEqual({
+    expect(new Ship('carrier', 5)).toEqual({
       name: 'carrier',
       hits: 5,
       position: [],
@@ -12,7 +12,7 @@ describe('Creates ships depending on what is asked', () => {
     });
   });
   test('returns a Battleship', () => {
-    expect(shipFactory('battleship', 4)).toEqual({
+    expect(new Ship('battleship', 4)).toEqual({
       name: 'battleship',
       hits: 4,
       position: [],
@@ -22,7 +22,7 @@ describe('Creates ships depending on what is asked', () => {
     });
   });
   test('returns a Destroyer', () => {
-    expect(shipFactory('destroyer', 3)).toEqual({
+    expect(new Ship('destroyer', 3)).toEqual({
       name: 'destroyer',
       hits: 3,
       position: [],
@@ -32,7 +32,7 @@ describe('Creates ships depending on what is asked', () => {
     });
   });
   test('returns a Patrol Boat', () => {
-    expect(shipFactory('patrol boat', 2)).toEqual({
+    expect(new Ship('patrol boat', 2)).toEqual({
       name: 'patrol boat',
       hits: 2,
       position: [],
@@ -46,7 +46,7 @@ describe('Creates ships depending on what is asked', () => {
 describe('ship methods work', () => {
   let ship1;
   beforeEach(() => {
-    ship1 = shipFactory('destroyer', 3);
+    ship1 = new Ship('destroyer', 3);
   });
 
   test('ship has been hit', () => {
