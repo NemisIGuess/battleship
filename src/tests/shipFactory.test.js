@@ -1,4 +1,3 @@
-import '../components/shipFactory';
 import shipFactory from '../components/shipFactory';
 
 describe('Creates ships depending on what is asked', () => {
