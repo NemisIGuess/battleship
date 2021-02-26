@@ -5,13 +5,14 @@ import Ship from '../ships/shipFactory';
 //Handles the turns of the players and if someone has won
 
 function Game(props) {
-  let player1 = props.game[0];
-  let player2 = props.game[1];
+  let player1 = props.match[0];
+  let player2 = props.match[1];
 
   let [gameboard, setGameboard] = React.useState(player1.board.board);
-  let [gameMode, setGameMode] = React.useState(props.game[3]);
+  // let [gameMode, setGameMode] = React.useState(props.match[3]);
 
   const handleCellClick = (e) => {
+    console.log(player1);
     // No hace nada si haces click en una casilla que ya estaba clickada
     if (player1.board.board[e.target.id].isHit === true) {
       return;

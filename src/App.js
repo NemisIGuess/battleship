@@ -17,8 +17,11 @@ function App() {
     setPlayerName(e.target.value);
   };
 
-  // Cuando cargamos la pagina se genera los componentes del player1 y los guardamos en la variable match
-  React.useEffect(() => {
+  //Si pulsamos el boton cambiamos la variable que renderiza la creacion del juego o el juego
+  const handleClick = () => {
+    if (playerName === '') {
+      return;
+    }
     const player1Board = new Gameboard();
     player1Board.createBoard();
     const player1 = new Player(playerName, player1Board);
@@ -26,13 +29,6 @@ function App() {
     player2Board.createBoard();
     const player2 = new Player('IA', player2Board);
     setMatch([player1, player2]);
-  }, []);
-
-  //Si pulsamos el boton cambiamos la variable que renderiza la creacion del juego o el juego
-  const handleClick = () => {
-    if (playerName === '') {
-      return;
-    }
     setGameIsOn(true);
   };
 
