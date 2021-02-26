@@ -1,7 +1,7 @@
-import Player from '../components/playerFactory';
+import Player from './playerFactory';
 
 describe('can create players', () => {
-  test('asigns name correctlyl', () => {
+  test('asigns name correctly', () => {
     expect(new Player('paquito', [])).toEqual({
       name: 'paquito',
       board: [],

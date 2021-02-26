@@ -5,4 +5,6 @@ class Player {
   }
 }
 
+// Need to add IA for the bot and its tests
+
 export default Player;

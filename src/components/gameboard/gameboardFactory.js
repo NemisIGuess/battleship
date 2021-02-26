@@ -56,8 +56,8 @@ class Gameboard {
     }
   }
 
-  setShips(ships) {
-    this.ships = [...this.ships, ships];
+  setShip(ship) {
+    this.ships = [...this.ships, ship];
   }
 
   mayday() {

@@ -1,5 +1,5 @@
 import Gameboard from '../components/gameboardFactory';
-import Ship from '../components/shipFactory';
+import Ship from '../ships/shipFactory';
 
 describe('Creates a board', () => {
   let testBoard;

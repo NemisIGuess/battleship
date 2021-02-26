@@ -1,0 +1,20 @@
+.player-gameboard {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(auto-fill, 30px);
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: black;
+  cursor: pointer;
+}
+
+.already-clicked {
+  cursor: not-allowed;
+  background-color: rgb(90, 148, 172);
+  caret-color: transparent;
+}
