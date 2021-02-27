@@ -17,6 +17,8 @@ For reference there are:
 - 2 ship of size 3: A Destroyer and a Submarine
 - 1 ship of size 2: The Patrol Boat
 
+You can also play the Salvo mode where you take as many shots as ships you have left alive, if you manage to hit an enemy ship you won't take an extra turn in this mode.
+
 ### Goals
 
-This project is done with the goal of implementing Test Driven Development (TDD).
+This project is done with the goal of implementing Test Driven Development (TDD) by Nemis.
