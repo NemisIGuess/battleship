@@ -52,6 +52,11 @@ function Game(props) {
           }
         })}
       </div>
+      <div className="player-ships">
+        {player1.board.ships.map((ship, index) => {
+          return <div className="ship" key={index}></div>;
+        })}
+      </div>
     </section>
   );
 }

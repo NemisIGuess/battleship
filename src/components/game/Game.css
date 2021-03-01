@@ -18,3 +18,8 @@
   background-color: rgb(90, 148, 172);
   caret-color: transparent;
 }
+
+.ship-container {
+  width: fit-content;
+  height: fit-content;
+}
