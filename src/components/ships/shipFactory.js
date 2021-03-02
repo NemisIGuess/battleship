@@ -48,6 +48,7 @@ class Ship {
 
   changeAxis() {
     this.axis === 'x' ? (this.axis = 'y') : (this.axis = 'x');
+    console.log(this.axis);
   }
 
   isHit() {

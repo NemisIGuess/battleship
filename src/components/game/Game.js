@@ -8,8 +8,8 @@ function Game(props) {
   let player1 = props.match[0];
   let player2 = props.match[1];
 
-  let [gameboard, setGameboard] = React.useState(player1.board.board);
-  // let [gameMode, setGameMode] = React.useState(props.match[3]);
+  const [gameboard, setGameboard] = React.useState(player1.board.board);
+  const [ships, setShips] = React.useState(player1.board.ships);
 
   const handleCellClick = (e) => {
     console.log(player1);
@@ -53,8 +53,38 @@ function Game(props) {
         })}
       </div>
       <div className="player-ships">
-        {player1.board.ships.map((ship, index) => {
-          return <div className="ship" key={index}></div>;
+        {ships.map((ship, index) => {
+          const counterArr = [];
+          for (let i = 0; i < ship.length; i++) {
+            counterArr.push(i);
+          }
+          if (ship.axis === 'y') {
+            return (
+              <div
+                style={{ gridTemplateRows: `repeat(${ship.length}, 30px)` }}
+                onClick={ship.changeAxis.bind(ship)}
+                className="ship-container"
+                key={index}
+              >
+                {counterArr.map((element, index) => {
+                  return <div key={index} className="ship-block"></div>;
+                })}
+              </div>
+            );
+          } else if (ship.axis === 'x') {
+            return (
+              <div
+                style={{ gridTemplateColumns: `repeat(${ship.length}, 30px)` }}
+                onClick={ship.changeAxis()}
+                className="ship-container"
+                key={index}
+              >
+                {counterArr.map((element, index) => {
+                  return <div key={index} className="ship-block"></div>;
+                })}
+              </div>
+            );
+          }
         })}
       </div>
     </section>

@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(10, 30px);
   grid-template-rows: repeat(auto-fill, 30px);
-  grid-row-gap: 1px;
-  grid-column-gap: 1px;
+  row-gap: 1px;
+  column-gap: 1px;
 }
 
 .cell {
@@ -19,7 +19,23 @@
   caret-color: transparent;
 }
 
+.player-ships {
+  display: flex;
+  justify-content: ;
+}
+
 .ship-container {
+  margin: 15px 5px;
   width: fit-content;
   height: fit-content;
+  display: grid;
+}
+
+.ship-block {
+  box-sizing: border-box;
+  caret-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 1px 1px;
 }
